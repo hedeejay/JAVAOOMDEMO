@@ -4,8 +4,8 @@ package com.jason.oom.demo;
  * 
  * VM Args:-Xss2M
  * 
- * ´´½¨Ïß³Ìµ¼ÖÂÄÚ´æÒç³öÒì³£
- * ÔËĞĞ½á¹û£º
+ * åˆ›å»ºçº¿ç¨‹å¯¼è‡´å†…å­˜æº¢å‡ºå¼‚å¸¸
+ * è¿è¡Œç»“æœï¼š
     Exception in thread"main"java.lang.OutOfMemoryError:unable to create new native thread
  * 
  * @author zzm
@@ -30,7 +30,7 @@ public class JavaVMStackOOM {
     public static void main(String[] args)
         throws Throwable {
         JavaVMStackOOM oom = new JavaVMStackOOM();
-        //oom.stackLeakByThread(); // »áµ¼ÖÂ²Ù×÷ÏµÍ³¼ÙËÀ¡£
+        //oom.stackLeakByThread(); // ä¼šå¯¼è‡´æ“ä½œç³»ç»Ÿå‡æ­»ã€‚
     }
     
 }

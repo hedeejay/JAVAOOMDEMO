@@ -6,27 +6,25 @@ import java.util.List;
 /**
  * VM Args:-XX:PermSize=10M -XX:MaxPermSize=10M
  * 
- * ÔËÐÐÊ±³£Á¿³Øµ¼ÖÂµÄÄÚ´æÒç³öÒì³£
+ * è¿è¡Œæ—¶å¸¸é‡æ± å¯¼è‡´çš„å†…å­˜æº¢å‡ºå¼‚å¸¸
  * 
- * ÓÉÓÚÔËÐÐÊ±³£Á¿³ØÊÇ·½·¨ÇøµÄÒ»²¿·Ö£¬Òò´ËÕâÁ½¸öÇøÓòµÄÒç³ö²âÊÔ¾Í·ÅÔÚÒ»Æð½øÐÐ¡£Ç°ÃæÌáµ½JDK 1.7¿ªÊ¼Öð²½¡°È¥ÓÀ¾Ã´ú¡±µÄÊÂÇé£¬ÔÚ´Ë¾ÍÒÔ²âÊÔ´úÂë¹Û²ìÒ»ÏÂÕâ¼þÊÂ¶Ô³ÌÐòµÄÊµ¼ÊÓ°Ïì¡£
+ * ç”±äºŽè¿è¡Œæ—¶å¸¸é‡æ± æ˜¯æ–¹æ³•åŒºçš„ä¸€éƒ¨åˆ†ï¼Œå› æ­¤è¿™ä¸¤ä¸ªåŒºåŸŸçš„æº¢å‡ºæµ‹è¯•å°±æ”¾åœ¨ä¸€èµ·è¿›è¡Œã€‚å‰é¢æåˆ°JDK 1.7å¼€å§‹é€æ­¥â€œåŽ»æ°¸ä¹…ä»£â€çš„äº‹æƒ…ï¼Œåœ¨æ­¤å°±ä»¥æµ‹è¯•ä»£ç è§‚å¯Ÿä¸€ä¸‹è¿™ä»¶äº‹å¯¹ç¨‹åºçš„å®žé™…å½±å“ã€‚
  * 
- * String.intern()ÊÇÒ»¸öNative·½·¨£¬ËüµÄ×÷ÓÃÊÇ£ºÈç¹û×Ö·û´®³£Á¿³ØÖÐÒÑ¾­°üº¬Ò»¸öµÈÓÚ´ËString¶ÔÏóµÄ×Ö·û´®£¬Ôò·µ»Ø´ú±í³ØÖÐÕâ¸ö×Ö·û´®µÄString¶ÔÏó£»·ñÔò£¬½«´ËString¶ÔÏó°ü¼Óµ½³£Á¿³ØÖÐ£¬
- * ²¢ÇÒ·µ»Ø´ËString¶ÔÏóµÄÒýÓÃ¡£ÔÚJDK 1.6¼°Ö®Ç°µÄ°æ±¾ÖÐ£¬ÓÉÓÚ³£Á¿³Ø·ÖÅäÔÚÓÀ¾Ã´úÄÚ£¬ÎÒÃÇ¿ÉÒÔÍ¨¹ý-XX:PermSizeºÍ-XX:MaxPermSizeÏÞÖÆ·½·¨Çø´óÐ¡£¬´Ó¶ø¼ä½ÓÏÞÖÆÆäÖÐ³£Á¿³ØµÄÈÝÁ¿
+ * String.intern()æ˜¯ä¸€ä¸ªNativeæ–¹æ³•ï¼Œå®ƒçš„ä½œç”¨æ˜¯ï¼šå¦‚æžœå­—ç¬¦ä¸²å¸¸é‡æ± ä¸­å·²ç»åŒ…å«ä¸€ä¸ªç­‰äºŽæ­¤Stringå¯¹è±¡çš„å­—ç¬¦ä¸²ï¼Œåˆ™è¿”å›žä»£è¡¨æ± ä¸­è¿™ä¸ªå­—ç¬¦ä¸²çš„Stringå¯¹è±¡ï¼›å¦åˆ™ï¼Œå°†æ­¤Stringå¯¹è±¡åŒ…åŠ åˆ°å¸¸é‡æ± ä¸­ï¼Œ
+ * å¹¶ä¸”è¿”å›žæ­¤Stringå¯¹è±¡çš„å¼•ç”¨ã€‚åœ¨JDK 1.6åŠä¹‹å‰çš„ç‰ˆæœ¬ä¸­ï¼Œç”±äºŽå¸¸é‡æ± åˆ†é…åœ¨æ°¸ä¹…ä»£å†…ï¼Œæˆ‘ä»¬å¯ä»¥é€šè¿‡-XX:PermSizeå’Œ-XX:MaxPermSizeé™åˆ¶æ–¹æ³•åŒºå¤§å°ï¼Œä»Žè€Œé—´æŽ¥é™åˆ¶å…¶ä¸­å¸¸é‡æ± çš„å®¹é‡
  * 
- * JDK 1.6ÔËÐÐ½á¹û£º
-
+ * JDK 1.6è¿è¡Œç»“æžœï¼š
     Exception in thread"main"java.lang.OutOfMemoryError:PermGen space
-
- * Ê¹ÓÃJDK 1.7ÔËÐÐÕâ¶Î³ÌÐò¾Í²»»áµÃµ½ÏàÍ¬µÄ½á¹û£¬whileÑ­»·½«Ò»Ö±½øÐÐÏÂÈ¥¡£
+ * ä½¿ç”¨JDK 1.7è¿è¡Œè¿™æ®µç¨‹åºå°±ä¸ä¼šå¾—åˆ°ç›¸åŒçš„ç»“æžœï¼Œwhileå¾ªçŽ¯å°†ä¸€ç›´è¿›è¡Œä¸‹åŽ»ã€‚
  *
  */
 public class RuntimeConstantPoolOOM{
 
     public static void main(String[]args){
     
-        //Ê¹ÓÃList±£³Ö×Å³£Á¿³ØÒýÓÃ£¬±ÜÃâFull GC»ØÊÕ³£Á¿³ØÐÐÎª
+        //ä½¿ç”¨Listä¿æŒç€å¸¸é‡æ± å¼•ç”¨ï¼Œé¿å…Full GCå›žæ”¶å¸¸é‡æ± è¡Œä¸º
         List<String>list=new ArrayList<String>();
-        //10MBµÄPermSizeÔÚinteger·¶Î§ÄÚ×ã¹»²úÉúOOMÁË
+        //10MBçš„PermSizeåœ¨integerèŒƒå›´å†…è¶³å¤Ÿäº§ç”ŸOOMäº†
         int i=0;
         while(true){
             list.add(String.valueOf(i++).intern());

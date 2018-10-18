@@ -7,8 +7,8 @@ import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
 /**
- * @Described£º·½·¨ÇøÒç³ö²âÊÔ
- *                    Ê¹ÓÃ¼¼Êõ CBlib
+ * @Describedï¼šæ–¹æ³•åŒºæº¢å‡ºæµ‹è¯•
+ *                    ä½¿ç”¨æŠ€æœ¯ CBlib
  * @VM args : -XX:PermSize=10M -XX:MaxPermSize=10M
  */
 public class MethodAreaOutOfMemory {
@@ -33,8 +33,8 @@ public class MethodAreaOutOfMemory {
 }
 
 /**
- * @Described£º²âÊÔÓÃÀı
- * @author YHJ create at 2011-11-12 ÏÂÎç08:53:09
+ * @Describedï¼šæµ‹è¯•ç”¨ä¾‹
+ * @author YHJ create at 2011-11-12 ä¸‹åˆ08:53:09
  * @FileNmae com.yhj.jvm.memory.methodArea.MethodAreaOutOfMemory.java
  */
 class TestCase {}
